@@ -2,3 +2,10 @@ body {
     background-color: #800000;
     font-family: 'Quattrocento Sans', sans-serif;
 }
+
+#logo img { 
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: table;
+}
