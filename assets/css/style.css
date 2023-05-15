@@ -3,22 +3,33 @@ body {
     font-family: 'Quattrocento Sans', sans-serif;
 }
 
-#logo img { 
+#logo {  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logo img {
     max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: table;
+}
+
+#quiz-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .quiz-container {
     border: solid 0.5rem #D2B48C;
     width: 60rem;
     height: 27rem;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 h2 {
@@ -26,6 +37,7 @@ h2 {
     color: #BB8376;
     font-size: 2.5rem;
     padding: 2rem;
+    text-align: center;
 }
 
 #start-game {
@@ -41,4 +53,15 @@ h2 {
     background: #D2B48C;
     color: #800000;
     font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 970px) {
+    .quiz-container {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
 }
