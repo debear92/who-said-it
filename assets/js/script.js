@@ -1,4 +1,4 @@
-let quizQuestions = [
+const quizQuestion = [
     {
         question: '"Your faithless love\'s the only hoax I believe in"', 
         answer: 'Taylor Swift',
@@ -59,3 +59,14 @@ let quizQuestions = [
         explanation: '"The lakes" from the album "folklore (deluxe version)'
     }
 ]
+
+let questionContainer = document.getElementById("question");
+let currentQuestion = 0;
+let score = 0;
+
+document.addEventListener("DOMContentLoaded", getQuestion ())
+
+function getQuestion() {
+    let currentQuizQuestion = quizQuestion[currentQuestion];
+    questionContainer.innerText = currentQuizQuestion.question;
+}
