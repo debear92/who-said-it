@@ -70,3 +70,10 @@ function getQuestion() {
     let currentQuizQuestion = quizQuestion[currentQuestion];
     questionContainer.innerText = currentQuizQuestion.question;
 }
+
+
+function selectAnswer() {
+    console.log("button click")
+    let currentQuizQuestion = quizQuestion[currentQuestion];
+
+}
