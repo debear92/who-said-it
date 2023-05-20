@@ -14,14 +14,14 @@ body {
     max-width: 100%;
 }
 
-#quiz-area {
+.quiz-area {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.quiz-container {
+.container {
     border: solid 0.5rem #D2B48C;
     width: 60rem;
     height: 27rem;
@@ -40,7 +40,7 @@ h2 {
     text-align: center;
 }
 
-button {
+button, #start-game {
     border: solid 0.15rem #D2B48C;
     background: #BB8376;
     color: #582B39;
@@ -49,10 +49,14 @@ button {
     font-weight: 700;
 }
 
-button:hover {
+button:hover, #start-game:hover {
     background: #D2B48C;
     color: #800000;
     font-size: 1.8rem;
+}
+
+#start-game {
+    text-decoration: none;
 }
 
 #next-question, .answer {
@@ -61,7 +65,7 @@ button:hover {
 
 /*media query*/
 @media only screen and (max-width: 970px) {
-    .quiz-container {
+    .container {
         width: 100%;
     }
 
