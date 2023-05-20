@@ -45,7 +45,7 @@ button, #start-game {
     background: #BB8376;
     color: #582B39;
     padding: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -60,15 +60,6 @@ button, #start-game {
 }
 
 /*quiz page*/
-#quiz-questions {
-    flex-direction: row;
-}
-
-button.answer {
-    display: flex;
-    margin: auto;
-}
-
 .hide {
     display: none;
 }
@@ -84,6 +75,7 @@ i.fas.fa-volume-up.audio-on {
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.5rem;
+    color: #BB8376;
 }
 
 .top-bar p {
@@ -91,9 +83,26 @@ i.fas.fa-volume-up.audio-on {
     font-weight: 600;
 }
 
-div#restart {
+#restart {
     left: 40%;
     position: relative;
+}
+
+#question {
+    padding-bottom: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #D2B48C;
+}
+
+
+#answer-container {
+    padding-top: 3rem;
+}
+
+.answer {
+    width: 12.6rem;
+    margin-right: 1rem;
 }
 
 /*media query*/
@@ -109,12 +118,16 @@ div#restart {
 }
 
 @media only screen and (max-width: 450px) {
-    #quiz-questions {
+    #question-container {
         flex-direction: column;
     }
 
     button.answer {
         display: flex;
         margin: 1rem;
+    }
+
+    #restart {
+        left: 30%;
     }
 }
