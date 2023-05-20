@@ -69,15 +69,36 @@ button.answer {
     margin: auto;
 }
 
-#next-question {
+.hide {
     display: none;
 }
 
+i.fas.fa-volume-up.audio-on {
+    display: none;
+}
 
+.top-bar {
+    height: 3rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.top-bar p {
+    margin: auto;
+    font-weight: 600;
+}
+
+div#restart {
+    left: 40%;
+    position: relative;
+}
 
 /*media query*/
 @media only screen and (max-width: 970px) {
-    .container {
+    .container, .top-bar {
         width: 100%;
     }
 
