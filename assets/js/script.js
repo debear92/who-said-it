@@ -71,43 +71,43 @@ let currentQuestion = 0;
 
 //event listeners
 document.addEventListener("DOMContentLoaded", getQuestion());
+nextButton.addEventListener('click', getQuestion);
 
 function getQuestion() {
-    let currentQuizQuestion = quotes[currentQuestion];
-    let author = quotes[currentQuestion].author;
-    comment.style.display = "none";
-    nextButton.style.display = "none";
-    questionContainer.innerText = currentQuizQuestion.quote;
-
-    for (let i = 0; i < options.length; i++) {
-        options[i].disabled = false;
-        options[i].classList.remove("correct", "wrong");
+let currentQuizQuestion = quotes[currentQuestion];
+let author = quotes[currentQuestion].author;
+comment.style.display = "none";
+nextButton.style.display = "none";
+questionContainer.innerText = currentQuizQuestion.quote;
+for (let i = 0; i < options.length; i++) {
+options[i].disabled = false;
+options[i].classList.remove("correct", "wrong");
 }
 }
-
 function checkAnswer(answer) {
-    const author = quotes[currentQuestion].author.toLowerCase();
+const author = quotes[currentQuestion].author.toLowerCase();
 
-    //disable the options
-    for (let i = 0; i < options.length; i++) {
-        options[i].disabled = true;
-    }
+//disable the options
+for (let i = 0; i < options.length; i++) {
+options[i].disabled = true;
+}
 
-    // add behaviour for correct or wrong answer
-    if (author === answer) {
-        this.classList.add("correct");
-        incrementScore();
-    } else {
-       this.classList.add("wrong");
-    }
-    
-    comment.style.display = "flex";
-    document.getElementById("explanation").innerText = quotes[currentQuestion].explanation;
-    nextButton.style.display = "flex"; 
-    currentQuestion++
+// add behaviour for correct or wrong answer
+if (author === answer) {
+this.classList.add("correct");
+incrementScore();
+} else {
+this.classList.add("wrong");
+}
+
+comment.style.display = "flex";
+document.getElementById("explanation").innerText = quotes[currentQuestion].explanation;
+nextButton.style.display = "flex"; 
+currentQuestion++
 }
 
 function incrementScore() {
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText =  ++oldScore;
+     let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText =  ++oldScore;
 }
+

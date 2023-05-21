@@ -29,11 +29,11 @@
         <div class="container" id="quiz-container">
             <div id="question-container">Question</div>
             <div id="option-container">
-            <button class="option" onclick="checkAnswer.call(this, 'taylor swift')">Taylor Swift</button>
-            <button class="option" onclick="checkAnswer.call(this, 'shakespeare')">Shakespeare</button>
+            <button class="option" id="taylor-button" onclick="checkAnswer.call(this, 'taylor swift')">Taylor Swift</button>
+            <button class="option" id="shakespeare-button" onclick="checkAnswer.call(this, 'shakespeare')">Shakespeare</button>
             </div>
             <div id="explanation"></div>
-            <button id="next-question" onclick="getQuestion()">Next</button>
+            <button id="next-question">Next</button>
         </div>
     </section>
    <script src="assets/js/script.js"></script> 
