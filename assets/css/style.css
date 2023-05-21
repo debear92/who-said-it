@@ -138,9 +138,18 @@ i.fas.fa-volume-up.audio-on {
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
     #quiz-container {
         flex-direction: column;
+    }
+
+    #question-container {
+        font-size: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    #option-container {
+        padding-top: 0;
     }
 
     button.option {
