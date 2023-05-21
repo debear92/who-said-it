@@ -83,15 +83,17 @@ i.fas.fa-volume-up.audio-on {
     left: 40%;
     position: relative;
 }
-
-#question-container {
-    padding-bottom: 2rem;
+#quiz-container {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: #D2B48C;
     text-align: center;
 }
 
+
+#question-container {
+    padding-bottom: 2rem;
+}
 
 #option-container {
     padding-top: 2rem;
