@@ -65,6 +65,7 @@ const quotes = [
 const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById('question-container');
 const options = document.getElementsByClassName("option");
+const nextButton = document.getElementById("next-question");
 let currentQuestion = 0;
 let score = 0;
 
@@ -73,9 +74,17 @@ document.addEventListener("DOMContentLoaded", getQuestion());
 
 function getQuestion() {
     const randomQuote = Math.floor(Math.random() *quotes.length);
-    const currentQuizQuestion = quotes[randomQuote];
+    let currentQuizQuestion = quotes[randomQuote];
     const author = quotes[randomQuote].author;
+    nextButton.style.display = "none";
     questionContainer.innerText = currentQuizQuestion.quote;
+
+    for (let i = 0; i < options.length; i++) {
+        options[i].disabled = false;
+        options[i].classList.remove("correct", "wrong");
+
+        currentQuizQuestion = randomQuote;
+}
 }
 
 function checkAnswer(answer) {
@@ -86,10 +95,14 @@ function checkAnswer(answer) {
         options[i].disabled = true;
     }
 
-    // add class tho show correct or wrong answer
+    // add behaviour for correct or wrong answer
     if (author === answer) {
-        console.log('You are right');
+        this.classList.add("correct");
+        console.log("correct");
     } else {
-        console.log ('you are wrong');
+       this.classList.add("wrong");
+        console.log('Wrong');
     }
+
+    nextButton.style.display = "flex"; 
 }

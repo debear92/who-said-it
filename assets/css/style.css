@@ -60,10 +60,6 @@ button, #start-game {
 }
 
 /*quiz page*/
-.hide {
-    display: none;
-}
-
 i.fas.fa-volume-up.audio-on {
     display: none;
 }
@@ -104,6 +100,10 @@ i.fas.fa-volume-up.audio-on {
 .option {
     width: 12.6rem;
     margin-right: 1rem;
+}
+
+#next-question {
+    margin-top: 1rem;
 }
 
 /*classes for correct and wrong answers*/

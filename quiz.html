@@ -29,10 +29,10 @@
         <div class="container" id="quiz-container">
             <div id="question-container">Question</div>
             <div id="option-container">
-            <button class="option" onclick="checkAnswer('shakespeare')">Taylor Swift</button>
-            <button class="option" onclick="checkAnswer('taylor swift')">Shakespeare</button>
+            <button class="option" onclick="checkAnswer.call(this, 'shakespeare')">Taylor Swift</button>
+            <button class="option" onclick="checkAnswer.call(this, 'taylor swift')">Shakespeare</button>
             </div>
-            <button id="next-question" class="hide">Next</button>
+            <button id="next-question">Next</button>
         </div>
     </section>
    <script src="assets/js/script.js"></script> 
