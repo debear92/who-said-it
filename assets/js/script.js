@@ -70,10 +70,18 @@ let comment = document.getElementById("explanation");
 let oldScore = parseInt(document.getElementById("score").innerText);
 let restartButton = document.getElementById('restart');
 let currentQuestion = 0;
+let btnTSwift = document.getElementById('taylor-button');
+let btnShake = document.getElementById('shakespeare-button');
 
 //event listeners
 document.addEventListener("DOMContentLoaded", startGame);
 nextButton.addEventListener('click', getNextQuestion);
+btnTSwift.addEventListener('click', (event) => {
+    checkAnswer(event, 'taylor swift');
+  });
+  btnShake.addEventListener('click', (event) => {
+      checkAnswer(event, 'shakespeare');
+  });  
 restartButton.addEventListener('click', restartGame);
 
 function startGame() {
@@ -88,7 +96,7 @@ function startGame() {
     }
 }
 
-function checkAnswer(answer) {
+function checkAnswer(e, answer) {
     const author = quotes[currentQuestion].author.toLowerCase();
 
 //disable the options
@@ -98,10 +106,10 @@ for (let i = 0; i < options.length; i++) {
 
 // add behaviour for correct or wrong answer
 if (author === answer) {
-    this.classList.add("correct");
+    e.target.classList.add("correct");
     incrementScore();
 } else {
-this.classList.add("wrong");
+    e.target.classList.add("wrong");
 }
 
 comment.style.display = "flex";
