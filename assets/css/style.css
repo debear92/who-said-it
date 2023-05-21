@@ -88,7 +88,7 @@ i.fas.fa-volume-up.audio-on {
     position: relative;
 }
 
-#question {
+#question-container {
     padding-bottom: 3rem;
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
@@ -97,11 +97,11 @@ i.fas.fa-volume-up.audio-on {
 }
 
 
-#answer-container {
+#option-container {
     padding-top: 3rem;
 }
 
-.answer {
+.option {
     width: 12.6rem;
     margin-right: 1rem;
 }
@@ -119,11 +119,11 @@ i.fas.fa-volume-up.audio-on {
 }
 
 @media only screen and (max-width: 450px) {
-    #question-container {
+    #quiz-container {
         flex-direction: column;
     }
 
-    button.answer {
+    button.option {
         display: flex;
         margin: 1rem;
     }
