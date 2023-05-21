@@ -66,6 +66,7 @@ const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById('question-container');
 const options = document.getElementsByClassName("option");
 const nextButton = document.getElementById("next-question");
+let comment = document.getElementById("explanation");
 let currentQuestion = 0;
 
 //event listeners
@@ -73,7 +74,8 @@ document.addEventListener("DOMContentLoaded", getQuestion());
 
 function getQuestion() {
     let currentQuizQuestion = quotes[currentQuestion];
-    const author = quotes[currentQuestion].author;
+    let author = quotes[currentQuestion].author;
+    comment.style.display = "none";
     nextButton.style.display = "none";
     questionContainer.innerText = currentQuizQuestion.quote;
 
@@ -98,7 +100,9 @@ function checkAnswer(answer) {
     } else {
        this.classList.add("wrong");
     }
-
+    
+    comment.style.display = "flex";
+    document.getElementById("explanation").innerText = quotes[currentQuestion].explanation;
     nextButton.style.display = "flex"; 
     currentQuestion++
 }

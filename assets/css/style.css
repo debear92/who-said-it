@@ -85,7 +85,7 @@ i.fas.fa-volume-up.audio-on {
 }
 
 #question-container {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: #D2B48C;
@@ -94,7 +94,7 @@ i.fas.fa-volume-up.audio-on {
 
 
 #option-container {
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 
 .option {
@@ -103,6 +103,13 @@ i.fas.fa-volume-up.audio-on {
 }
 
 #next-question {
+    margin-top: 1rem;
+}
+
+#explanation {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #BB8376;
     margin-top: 1rem;
 }
 
