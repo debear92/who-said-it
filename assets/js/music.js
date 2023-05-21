@@ -11,13 +11,12 @@ let music = [
 
 let audioElement = document.getElementById("random-song");
 let startStop = document.getElementById("audio");
+let start = document.getElementsByClassName("audio-on");
+let stop = document.getElementsByClassName("audio-off");
 startStop.addEventListener('click', playRandomMusic);
 
 function playRandomMusic() {
-    console.log("play");
     const randomIndex = Math.floor(Math.random() * music.length);
-
     audioElement.src = music[randomIndex];
-
     audioElement.play();
 }
