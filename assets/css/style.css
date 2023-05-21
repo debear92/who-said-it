@@ -106,6 +106,19 @@ i.fas.fa-volume-up.audio-on {
     margin-right: 1rem;
 }
 
+/*classes for correct and wrong answers*/
+.correct {
+    border: solid 0.15rem #004800;
+    background: #3D7A09;
+    color: #582B39;
+}
+
+.wrong {
+    border: solid 0.15rem #b51a1a;
+    background: #FF0000;
+    color: #582B39;
+}
+
 /*media query*/
 @media only screen and (max-width: 970px) {
     .container, .top-bar {

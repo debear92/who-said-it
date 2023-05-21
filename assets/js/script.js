@@ -80,6 +80,13 @@ function getQuestion() {
 
 function checkAnswer(answer) {
     const author = quotes[currentQuestion].author.toLowerCase();
+
+    //disable the options
+    for (let i = 0; i < options.length; i++) {
+        options[i].disabled = true;
+    }
+
+    // add class tho show correct or wrong answer
     if (author === answer) {
         console.log('You are right');
     } else {
