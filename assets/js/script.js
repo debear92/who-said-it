@@ -68,11 +68,13 @@ const options = document.getElementsByClassName("option");
 const nextButton = document.getElementById("next-question");
 let comment = document.getElementById("explanation");
 let oldScore = parseInt(document.getElementById("score").innerText);
+let restartButton = document.getElementById('restart');
 let currentQuestion = 0;
 
 //event listeners
-document.addEventListener("DOMContentLoaded", startGame());
+document.addEventListener("DOMContentLoaded", startGame);
 nextButton.addEventListener('click', getNextQuestion);
+restartButton.addEventListener('click', restartGame);
 
 function startGame() {
     let currentQuizQuestion = quotes[currentQuestion];
@@ -121,5 +123,11 @@ function getNextQuestion() {
 }
 
 function showResult() {
-    quizContainer.innerText = `You scored ${oldScore} out of ${quotes.length}`;
+    quizContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
+}
+
+function restartGame() {
+    document.getElementById("score").innerText =  0; 
+    currentQuestion = 0;
+    startGame();
 }
