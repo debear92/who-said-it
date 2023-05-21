@@ -67,23 +67,19 @@ const questionContainer = document.getElementById('question-container');
 const options = document.getElementsByClassName("option");
 const nextButton = document.getElementById("next-question");
 let currentQuestion = 0;
-let score = 0;
 
 //event listeners
 document.addEventListener("DOMContentLoaded", getQuestion());
 
 function getQuestion() {
-    const randomQuote = Math.floor(Math.random() *quotes.length);
-    let currentQuizQuestion = quotes[randomQuote];
-    const author = quotes[randomQuote].author;
+    let currentQuizQuestion = quotes[currentQuestion];
+    const author = quotes[currentQuestion].author;
     nextButton.style.display = "none";
     questionContainer.innerText = currentQuizQuestion.quote;
 
     for (let i = 0; i < options.length; i++) {
         options[i].disabled = false;
         options[i].classList.remove("correct", "wrong");
-
-        currentQuizQuestion = randomQuote;
 }
 }
 
@@ -98,11 +94,16 @@ function checkAnswer(answer) {
     // add behaviour for correct or wrong answer
     if (author === answer) {
         this.classList.add("correct");
-        console.log("correct");
+        incrementScore();
     } else {
        this.classList.add("wrong");
-        console.log('Wrong');
     }
 
     nextButton.style.display = "flex"; 
+    currentQuestion++
+}
+
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText =  ++oldScore;
 }

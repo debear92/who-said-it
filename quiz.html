@@ -17,8 +17,8 @@
     </section>
     <section class="quiz-area">
         <div class="top-bar">
-            <div id="score">
-                <p>Score<span> 0</span></p>
+            <div id="score-container">
+                <p>Score <span id="score">0</span></p>
             </div>
             <div id="restart"><i class="fa-solid fa-rotate-left"></i></div>
             <div id="audio">
@@ -29,10 +29,10 @@
         <div class="container" id="quiz-container">
             <div id="question-container">Question</div>
             <div id="option-container">
-            <button class="option" onclick="checkAnswer.call(this, 'shakespeare')">Taylor Swift</button>
-            <button class="option" onclick="checkAnswer.call(this, 'taylor swift')">Shakespeare</button>
+            <button class="option" onclick="checkAnswer.call(this, 'taylor swift')">Taylor Swift</button>
+            <button class="option" onclick="checkAnswer.call(this, 'shakespeare')">Shakespeare</button>
             </div>
-            <button id="next-question">Next</button>
+            <button id="next-question" onclick="getQuestion()">Next</button>
         </div>
     </section>
    <script src="assets/js/script.js"></script> 
