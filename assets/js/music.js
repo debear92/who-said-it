@@ -1,19 +1,20 @@
 let music = [
-    "../music/champagne-problems.mp3",
-    "../music/cruel-summer.mp3",
-    "../music/dont-blame-me.mp3",
-    "../music/get-away-car.mp3",
-    "../music/miss-americana-and-the-hearbreak-prince.mp3",
-    "../music/speak-now.mp3",
-    "../music/the-great-war.mp3",
-    "../music/wouldve-couldve-should-ve.mp3"
+    "/assets/music/champagne-problems.mp3",
+    "/assets//music/cruel-summer.mp3",
+    "/assets//music/dont-blame-me.mp3",
+    "/assets//music/get-away-car.mp3",
+    "/assets//music/miss-americana-and-the-hearbreak-prince.mp3",
+    "/assets//music/speak-now.mp3",
+    "/assets//music/the-great-war.mp3",
+    "/assets//music/wouldve-couldve-should-ve.mp3"
 ];
 
-let audioElement = document.getElementById("audio");
-
-audioElement.addEventListener('click', playRandomMusic);
+let audioElement = document.getElementById("random-song");
+let startStop = document.getElementById("audio");
+startStop.addEventListener('click', playRandomMusic);
 
 function playRandomMusic() {
+    console.log("play");
     const randomIndex = Math.floor(Math.random() * music.length);
 
     audioElement.src = music[randomIndex];
