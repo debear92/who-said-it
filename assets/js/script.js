@@ -72,7 +72,7 @@ function getQuestion() {
 }
 
 
-function selectAnswer() {
+function checkAnswer() {
     console.log("button click")
     let currentQuizQuestion = quizQuestion[currentQuestion];
 
