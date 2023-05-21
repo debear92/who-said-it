@@ -64,7 +64,7 @@ const quotes = [
 //variables
 const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById('question-container');
-const option = document.getElementsByClassName("option");
+const options = document.getElementsByClassName("option");
 let currentQuestion = 0;
 let score = 0;
 
@@ -76,4 +76,13 @@ function getQuestion() {
     const currentQuizQuestion = quotes[randomQuote];
     const author = quotes[randomQuote].author;
     questionContainer.innerText = currentQuizQuestion.quote;
+}
+
+function checkAnswer(answer) {
+    const author = quotes[currentQuestion].author.toLowerCase();
+    if (author === answer) {
+        console.log('You are right');
+    } else {
+        console.log ('you are wrong');
+    }
 }
