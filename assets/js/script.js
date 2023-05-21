@@ -67,35 +67,37 @@ const questionContainer = document.getElementById('question-container');
 const options = document.getElementsByClassName("option");
 const nextButton = document.getElementById("next-question");
 let comment = document.getElementById("explanation");
+let oldScore = parseInt(document.getElementById("score").innerText);
 let currentQuestion = 0;
 
 //event listeners
-document.addEventListener("DOMContentLoaded", getQuestion());
-nextButton.addEventListener('click', getQuestion);
+document.addEventListener("DOMContentLoaded", startGame());
+nextButton.addEventListener('click', getNextQuestion);
 
-function getQuestion() {
-let currentQuizQuestion = quotes[currentQuestion];
-let author = quotes[currentQuestion].author;
-comment.style.display = "none";
-nextButton.style.display = "none";
-questionContainer.innerText = currentQuizQuestion.quote;
-for (let i = 0; i < options.length; i++) {
-options[i].disabled = false;
-options[i].classList.remove("correct", "wrong");
+function startGame() {
+    let currentQuizQuestion = quotes[currentQuestion];
+    let author = quotes[currentQuestion].author;
+    comment.style.display = "none";
+    nextButton.style.display = "none";
+    questionContainer.innerText = currentQuizQuestion.quote;
+    for (let i = 0; i < options.length; i++) {
+        options[i].disabled = false;
+        options[i].classList.remove("correct", "wrong");
+    }
 }
-}
+
 function checkAnswer(answer) {
-const author = quotes[currentQuestion].author.toLowerCase();
+    const author = quotes[currentQuestion].author.toLowerCase();
 
 //disable the options
 for (let i = 0; i < options.length; i++) {
-options[i].disabled = true;
+    options[i].disabled = true;
 }
 
 // add behaviour for correct or wrong answer
 if (author === answer) {
-this.classList.add("correct");
-incrementScore();
+    this.classList.add("correct");
+    incrementScore();
 } else {
 this.classList.add("wrong");
 }
@@ -103,11 +105,21 @@ this.classList.add("wrong");
 comment.style.display = "flex";
 document.getElementById("explanation").innerText = quotes[currentQuestion].explanation;
 nextButton.style.display = "flex"; 
-currentQuestion++
 }
 
 function incrementScore() {
-     let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText =  ++oldScore;
+    document.getElementById("score").innerText = ++oldScore;
 }
 
+function getNextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < quotes.length) {
+        startGame();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    quizContainer.innerText = `You scored ${oldScore} out of ${quotes.length}`;
+}
