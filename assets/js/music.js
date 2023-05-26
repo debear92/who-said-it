@@ -2,7 +2,7 @@ const audioOn = document.getElementById("on");
 const audioOff = document.getElementById("off");
 const correctAudio = new Audio('assets/sound/clapping.mp3');
 const wrongAudio = new Audio ('assets/sound/trouble.mp3');
-const resultScreen = new Audio ('assets/sound/wouldve-couldve-should-ve.mp3');
+window.resultScreen = new Audio ('assets/sound/wouldve-couldve-should-ve.mp3');
 
 //Adding conditions for the audio to always be off when first loading the page
 audioOn.style.display = "none";

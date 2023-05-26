@@ -73,6 +73,7 @@ let currentQuestion = 0;
 let btnTSwift = document.getElementById('taylor-button');
 let btnShake = document.getElementById('shakespeare-button');
 
+
 //event listeners
 document.addEventListener("DOMContentLoaded", startGame);
 nextButton.addEventListener('click', getNextQuestion);
@@ -138,11 +139,26 @@ function showResult() {
     nextButton.style.display = 'none';
     comment.style.display = 'none';
     restartButton.style.display = "block";
+    btnTSwift.style.display = 'none';
+    btnShake.style.display = 'none';
 }
 
 function restartGame() {
     document.getElementById("score").innerText =  0; 
     currentQuestion = 0;
     oldScore = 0;
+    stopResultScreen();
     startGame();
+    btnTSwift.style.display = 'inline-block';
+    btnShake.style.display = 'inline-block';
+}
+
+/**
+ * When restarting the game the song from result page will stop too
+ */
+function stopResultScreen() {
+   if(window.resultScreen) {
+    window.resultScreen.pause();
+    window.resultScreen.currenTime = 0;
+   }
 }
