@@ -133,8 +133,11 @@ function getNextQuestion() {
 }
 
 function showResult() {
-    quizContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
+    questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
     playScorePage();
+    nextButton.style.display = 'none';
+    comment.style.display = 'none';
+    restartButton.style.display = "block";
 }
 
 function restartGame() {
