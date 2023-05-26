@@ -4,6 +4,13 @@ const audioOn = document.getElementsByClassName('audio-on');
 const audioOff = document.getElementsByClassName('audio-off');
 const audioButton = document.getElementById('audio');
 
+audioButton.addEventListener('click', () => {
+    toggleAudio();
+});
+
+
+
+
 
 function toggleAudio()
 function turnOn()
