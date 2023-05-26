@@ -137,5 +137,6 @@ function showResult() {
 function restartGame() {
     document.getElementById("score").innerText =  0; 
     currentQuestion = 0;
+    oldScore = 0;
     startGame();
 }
