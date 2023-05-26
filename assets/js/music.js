@@ -19,3 +19,11 @@ function toggleAudio() {
         wrongAudio.muted = true;
     }
 }
+
+function playCorrectAudio() {
+    correctAudio.play();
+}
+
+function playWrongAudio() {
+    wrongAudio.play();
+}

@@ -108,8 +108,10 @@ for (let i = 0; i < options.length; i++) {
 if (author === answer) {
     e.target.classList.add("correct");
     incrementScore();
+    playCorrectAudio();
 } else {
     e.target.classList.add("wrong");
+    playWrongAudio();
 }
 
 comment.style.display = "flex";
