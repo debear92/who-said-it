@@ -1,24 +1,21 @@
-let myAudio = document.getElementById("audio");
-let onIcon = document.getElementsByClassName("audio-on")[0];
-let offIcon = document.getElementsByClassName("audio-off")[0];
-onIcon.style.display = "none";
-offIcon.style.display = "in-line";
-let isPlaying = false;
+const audioOn = document.getElementById("on");
+const audioOff = document.getElementById("off");
+const correctAudio = new Audio('assets/sound/clapping.mp3');
+const wrongAudio = new Audio ('assets/sound/trouble.mp3');
 
-myAudio.addEventListener('click', togglePlay);
+audioOn.addEventListener("click", toggleAudio);
+audioOff.addEventListener("click", toggleAudio);
 
-function togglePlay() {
-    isPlaying ? audioOff() : audioOn();
-};
-
-function audioOn(){
-   isPlaying = true;
-   onIcon.style.display = "in-line";
-   offIcon.style.display = "none";
-}
-
-function audioOff() {
-    isPlaying = false;
-    onIcon.style.display = "none";
-    offIcon.style.display = "in-line";
+function toggleAudio() {
+    if (audioOn.style.display === "none") {
+        audioOn.style.display = "in-line";
+        audioOff.style.display = "none";
+        correctAudio.muted = false;
+        wrongAudio.muted = false;
+    } else {
+        audioOn.style.display = "none";
+        audioOff.style.display = "in-line";
+        correctAudio.muted = true;
+        wrongAudio.muted = true;
+    }
 }

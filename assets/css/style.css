@@ -59,11 +59,7 @@ button, #start-game {
     text-decoration: none;
 }
 
-/*quiz page
-i.fas.fa-volume-up.audio-on {
-    display: none;
-}
-*/
+/*quiz page*/
 .top-bar {
     height: 3rem;
     width: 60rem;
