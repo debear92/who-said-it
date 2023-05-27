@@ -151,6 +151,9 @@ function restartGame() {
     startGame();
     btnTSwift.style.display = 'inline-block';
     btnShake.style.display = 'inline-block';
+    if (resultScreen) {
+    window.resultScreen.currentTime = 0;
+    }
 }
 
 /**
@@ -158,7 +161,6 @@ function restartGame() {
  */
 function stopResultScreen() {
    if(window.resultScreen) {
-    window.resultScreen.pause();
-    window.resultScreen.currenTime = 0;
+   window.resultScreen.pause();
    }
 }
