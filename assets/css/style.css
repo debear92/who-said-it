@@ -141,7 +141,7 @@ button, #start-game {
     }
 
     #question-container {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding-bottom: 0;
     }
 
@@ -152,6 +152,15 @@ button, #start-game {
     button.option {
         display: flex;
         margin: 1rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    #explanation {
+        font-size: 1.2rem;
     }
 
     #restart {
