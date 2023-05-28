@@ -1,6 +1,6 @@
 ![Mock ups](imagespath)
 
-[View the live project here](link)
+[View the live project here](https://debear92.github.io/who-said-it/)
 
 Add brief description
 

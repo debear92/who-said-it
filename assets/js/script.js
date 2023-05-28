@@ -101,6 +101,8 @@ function startGame() {
     questionContainer.innerText = currentQuizQuestion.quote;
     correctAudio.currentTime = 0;
     wrongAudio.currentTime = 0;
+    nextButton.style.display = "none";
+    restart.style.display = "none";
     for (let i = 0; i < options.length; i++) {
         options[i].disabled = false;
         options[i].classList.remove("correct", "wrong");
