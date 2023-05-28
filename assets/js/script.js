@@ -61,7 +61,7 @@ const quotes = [
     }
 ]
 
-//variables
+//declarations
 const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById('question-container');
 const options = document.getElementsByClassName("option");
@@ -72,6 +72,7 @@ let restartButton = document.getElementById('restart');
 let currentQuestion = 0;
 let btnTSwift = document.getElementById('taylor-button');
 let btnShake = document.getElementById('shakespeare-button');
+let restart = document.getElementById('restart-game');
 
 
 //event listeners
@@ -84,12 +85,15 @@ btnTSwift.addEventListener('click', (event) => {
       checkAnswer(event, 'shakespeare');
   });  
 restartButton.addEventListener('click', restartGame);
+restart.addEventListener('click', restartGame);
+
 
 function startGame() {
     let currentQuizQuestion = quotes[currentQuestion];
     let author = quotes[currentQuestion].author;
     comment.style.display = "none";
     nextButton.style.display = "none";
+    restart.style.display = "none";
     questionContainer.innerText = currentQuizQuestion.quote;
     for (let i = 0; i < options.length; i++) {
         options[i].disabled = false;
@@ -145,6 +149,8 @@ function showResult() {
     restartButton.style.display = "block";
     btnTSwift.style.display = 'none';
     btnShake.style.display = 'none';
+    restart.style.display = "flex";
+
 }
 
 function restartGame() {
