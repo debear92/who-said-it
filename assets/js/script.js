@@ -95,6 +95,8 @@ function startGame() {
     nextButton.style.display = "none";
     restart.style.display = "none";
     questionContainer.innerText = currentQuizQuestion.quote;
+    correctAudio.currentTime = 0;
+    wrongAudio.currentTime = 0;
     for (let i = 0; i < options.length; i++) {
         options[i].disabled = false;
         options[i].classList.remove("correct", "wrong");
@@ -128,9 +130,15 @@ function incrementScore() {
     document.getElementById("score").innerText = ++oldScore;
 }
 
+function stopAudio() {
+    correctAudio.pause();
+    wrongAudio.pause();
+}
+
 function getNextQuestion() {
     currentQuestion++;
     if (currentQuestion < quotes.length) {
+        stopAudio();
         startGame();
     } else {
         showResult();
@@ -150,7 +158,6 @@ function showResult() {
     btnTSwift.style.display = 'none';
     btnShake.style.display = 'none';
     restart.style.display = "flex";
-
 }
 
 function restartGame() {
