@@ -134,7 +134,11 @@ function getNextQuestion() {
 }
 
 function showResult() {
-    questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
+    if (oldScore >= 6 ) {
+        questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
+    } else {
+    questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! Maybe you should read some more english litterature and listen to the latest Taylor Swift's album!`;
+    };
     playScorePage();
     nextButton.style.display = 'none';
     comment.style.display = 'none';
