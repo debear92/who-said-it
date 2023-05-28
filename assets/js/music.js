@@ -1,3 +1,4 @@
+//declarations
 const audioOn = document.getElementById("on");
 const audioOff = document.getElementById("off");
 const correctAudio = new Audio('assets/sound/clapping.mp3');
@@ -20,6 +21,9 @@ resultScreen.volume = 0.3;
 audioOn.addEventListener("click", toggleAudio);
 audioOff.addEventListener("click", toggleAudio);
 
+/**
+ * Switch audio off if the audio is already playing, switch the audio on if the audio is currently not playing 
+ */
 function toggleAudio() {
     if (audioOn.style.display === "none") {
         audioOn.style.display = "block";
@@ -36,14 +40,23 @@ function toggleAudio() {
     }
 }
 
+/**
+ * Determine sound to play when a correct answer is selected
+ */
 function playCorrectAudio() {
     correctAudio.play();
 }
 
+/**
+ * Determine sound to play when a wrong answer is selected
+ */
 function playWrongAudio() {
     wrongAudio.play();
 }
 
+/**
+ * Determine sound to play when reaching the final results screen
+ */
 function playScorePage() {
     resultScreen.play();
 }
