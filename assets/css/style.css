@@ -10,7 +10,7 @@ body {
     justify-content: center;
 }
 
-#logo img {
+img {
     max-width: 100%;
 }
 
@@ -144,6 +144,39 @@ footer a:hover {
     border: solid 0.15rem #b51a1a;
     background: #FF0000;
     color: #582B39;
+}
+
+/*404 page*/
+#lost-page {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #BB8376;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+#homepage {
+border: solid 0.15rem #D2B48C;
+background: #BB8376;
+color: #582B39;
+padding: 1.5rem;
+font-size: 1.5rem;
+font-weight: 700;
+text-decoration: none;
+}
+
+#homepage:hover {
+    background: #D2B48C;
+    color: #800000;
+    font-size: 1.8rem;
 }
 
 /*media query*/
