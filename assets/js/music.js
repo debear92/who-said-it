@@ -47,3 +47,4 @@ function playWrongAudio() {
 function playScorePage() {
     resultScreen.play();
 }
+

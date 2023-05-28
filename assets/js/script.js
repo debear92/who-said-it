@@ -87,7 +87,13 @@ btnTSwift.addEventListener('click', (event) => {
 restartButton.addEventListener('click', restartGame);
 restart.addEventListener('click', restartGame);
 
+//functions
 
+/**
+ * Start the game by getting the first question in the array
+ * Hide the next and restart button
+ * Reset correctAudio and wrongAudio to 0
+ */
 function startGame() {
     let currentQuizQuestion = quotes[currentQuestion];
     let author = quotes[currentQuestion].author;
@@ -103,6 +109,10 @@ function startGame() {
     }
 }
 
+/**
+ * Check if answer provided by user is correct, user won't be able to change answer once an option is selected
+ * When getting the correct or wrong answer the user will see a short explanation of the answer underneath the quote itself
+ */
 function checkAnswer(e, answer) {
     const author = quotes[currentQuestion].author.toLowerCase();
 
@@ -126,15 +136,26 @@ document.getElementById("explanation").innerText = quotes[currentQuestion].expla
 nextButton.style.display = "flex"; 
 }
 
+/**
+ * For each correct answer the score it's incremented by one
+ */
 function incrementScore() {
     document.getElementById("score").innerText = ++oldScore;
 }
 
+/**
+ * When moving to a new question the correctAudio or wrongAudio will stop play
+ */
 function stopAudio() {
     correctAudio.pause();
     wrongAudio.pause();
 }
 
+/**
+ * When clicking on the next question button the user will receive a new question, if there are still questions in the array
+ * Otherwise the result screen will display
+ * The correctAudio or wrongAudio will stop play
+ */
 function getNextQuestion() {
     currentQuestion++;
     if (currentQuestion < quotes.length) {
@@ -145,6 +166,10 @@ function getNextQuestion() {
     }
 }
 
+/**
+ * User will get a different message in the results screen according to the score received
+ * The next button and the options will be hidden, the user will be presented with a button to start again the game
+ */
 function showResult() {
     if (oldScore >= 6 ) {
         questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
@@ -160,6 +185,10 @@ function showResult() {
     restart.style.display = "flex";
 }
 
+/**
+ * Restart game from the first question
+ * The score will go back to 0
+ */
 function restartGame() {
     document.getElementById("score").innerText =  0; 
     currentQuestion = 0;
@@ -168,6 +197,8 @@ function restartGame() {
     startGame();
     btnTSwift.style.display = 'inline-block';
     btnShake.style.display = 'inline-block';
+
+    //Set the song at the result screen to start from the beginning each time the game starts again
     if (resultScreen) {
     window.resultScreen.currentTime = 0;
     }
