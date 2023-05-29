@@ -59,10 +59,9 @@ const quotes = [
         author: 'Taylor Swift',
         explanation: '"The lakes" from the album "folklore (deluxe version)'
     }
-]
+];
 
 //declarations
-const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById('question-container');
 const options = document.getElementsByClassName("option");
 const nextButton = document.getElementById("next-question");
@@ -173,7 +172,7 @@ function showResult() {
         questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
     } else {
     questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! Maybe you should read some more english litterature and listen to the latest Taylor Swift's album!`;
-    };
+    }
     playScorePage();
     nextButton.style.display = 'none';
     comment.style.display = 'none';
