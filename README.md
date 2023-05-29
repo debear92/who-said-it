@@ -27,7 +27,7 @@ Who Said It it's quiz game where users are presented with a prompt that could ei
 - [Credits](#credits)
   - [Media](#media)
   - [Code](#code)
-- [Acknowledgements](#acknowledgements)
+- [Acknowledgements](#aknowledgments)
 
 # User Experience
 
@@ -54,7 +54,15 @@ Who Said It it's quiz game where users are presented with a prompt that could ei
 
 ![Color Pallet](readme/color-pallet.PNG)
 
-- Two fonts were paired togheter for the website. Playfair Display was used for the logo, while Quattrocento Sans was used in the text of the page. The two fonts were chosen on [Google Fonts](https://fonts.google.com/)
+Two fonts were paired togheter for the website. The two fonts were chosen on [Google Fonts](https://fonts.google.com/)
+
+- Playfair Display was used for the logo and the questions. 
+
+![Playfair Display](readme/playfair-display.PNG)
+
+- Quattrocento Sans was used in the smaller text of the page. 
+
+![Quattrocento Sans](readme/quattrocento-sans.PNG)
 
 # Features
 
