@@ -9,6 +9,10 @@ Who Said It it's quiz game where users are presented with a prompt that could ei
  - [User Stories](#user-stories) 
  - [Design](#design)
 - [Features](#features)
+  - [Homepage](#homepage)
+  - [Footer](#footer)
+  - [Quiz Page](#quiz-page)
+  - [Result Screen](#results-screen)
   - [Responsivness](#responsivness)
   - [Features to implement](#features-to-implement)
 - [Technologies Used](#technologies-used)
@@ -22,7 +26,6 @@ Who Said It it's quiz game where users are presented with a prompt that could ei
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Media](#media)
-  - [Content](#content)
   - [Code](#code)
 - [Acknowledgements](#acknowledgements)
 
@@ -169,22 +172,16 @@ To test my website I have opened it on different devices, to see if it was worki
 
 Every page was tested through Lighthouse for both desktop and mobile.
 
-<details>
-  <summary>Desktop</summary>
+- Desktop
 
   ![Lighthouse Homepage Desktop](readme/lighthouse-homepage-desktop.PNG)
   ![Lighthouse Quiz Desktop](readme/lighthouse-quiz-desktop.PNG)
   
-</details>
-
-<details>
-  <summary>Mobile</summary>
+- Mobile
 
   ![Lighthouse Homepage Mobile](readme/lighthouse-homepage-mobile.PNG)
   ![Lighthouse Quiz Mobile](readme/lighthouse-quiz-mobile.PNG)
   
-</details>
-
 ## Accessibility
 
 All pages were tested through [Wave](https://wave.webaim.org/) for accessibility
@@ -199,6 +196,8 @@ All pages were tested through [Wave](https://wave.webaim.org/) for accessibility
 - The function to start the game is called when the DOM loads. The startGame function was applying a display: none to the "Next" button and the "Start again!" button. With some connection, when the page was loading slightly slower the two buttons would appear briefly on the screen before disappearing. I was able to easily fix this by applying the display: none directly on CSS file instead.
 
 ## Unfixed
+
+- There are no known unfixed bugs.
 
 # Deployment
 
@@ -237,6 +236,10 @@ A copy of the GitHub Repository can be made by forking the GitHub account. Chang
 
 ## Code
 
-- 
+- For a general idea of how a quiz with Javascript is made I watched this video: [Build A Quiz App With JavaScript](https://youtu.be/riDzcEQbX6k) from 
+[Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)
+- For the checkAnswer function: [Passing Arguments to Event Listeners in JavaScript](https://plainenglish.io/blog/passing-arguments-to-event-listeners-in-javascript-1a81bc397ecb)
 
 # Aknowledgments
+
+This project was created as part of my Software Developer course at Code Institute. I would like to thank my mentor and the slack community for the support received during the development of this project. 
