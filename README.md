@@ -74,6 +74,7 @@ Who Said It it's quiz game where users are presented with a prompt that could ei
 - For each question the user will be presented with two options: Taylor Swift or Shakespeare. Once the user select an option they won't be able to change it.
 - If a user answer a question correctly a correct answer sound will be played and the selected option will turn green. The score will increment by one.
 - If a user answer a question incorrectly a wrong answer sound will be played and the selected option wil turn red. The score will remain the same.
+- Once the question is answered, the user will presented with a short explanation on why the answer was right or wrong by informing the user which song or play the lyric is from.
 - On top of the question, the user will find a bar that will show their current score and will allow the user to restart the game from the beginning and toggle on or off the audio.
 
 ![Quiz Page](readme/quiz-page.PNG)
@@ -126,30 +127,76 @@ To test my website I have opened it on different devices, to see if it was worki
   - Android
   - iOS
 
+  |Action | Expected behavious | Result|
+  |-------|--------------------|-------|
+  |Copy url of the browser and paste it in browser. Press enter | Browser should load index.html | Pass |
+  |Scale up the window | The contentent should not stretch over a certain size | Pass |
+  |Scale down the window | The contentent should be visible without having to scroll horizontally | Pass |
+  |Click on start game button on the home page. | Ensure the correct page opens. | Pass |
+  |Click on the answer options. | The button should turn green for correct answer, red for wrong answer | Pass |
+  |Click on the audio icon to switch on and off the audio. | Page should load with the audio being set to off by default. | Pass |
+  |Click on the restart game icon or button.| Score should go back to zero, questions will start again from number one. | Pass |
+  -------
+
+
 ## Validator
 
-## Lighthouse
+- HTML
+  - No errors were returned when passing the final version through the official [W3 Validator](https://validator.w3.org/)
 
-Every page was tested through Lighthouse for both desktop and mobile.
+![HTML validator Homepage](readme/homepage-html-validator.PNG)
+
+![HTML validator Quiz Page](readme/quiz-html-validator.PNG)
 
 - CSS
   - No errors were found when passing the final version through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
 
-## Accessibility
-
-All pages were tested through [Wave](https://wave.webaim.org/) for accessibility
-
-<p>
+  <p>
 <a href="http://jigsaw.w3.org/css-validator/check/referer">
     <img style="border:0;width:88px;height:31px"
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
     </a>
 </p>
+
+- Javascript
+  - No errors were found when passing the final version through the official [JSHint](https://jshint.com/). Many of the warning relate to undefined variable or function, this is due to the fact that two separate Javascript files were used for this project and those variables or functions were called in the other page.
+
+  ![JSHint Validator script.js](readme/jshint-script.PNG)
+  ![JSHint Validator music.js](readme/jshint-music.PNG)
+
+## Lighthouse
+
+Every page was tested through Lighthouse for both desktop and mobile.
+
+<details>
+  <summary>Desktop</summary>
+
+  ![Lighthouse Homepage Desktop](readme/lighthouse-homepage-desktop.PNG)
+  ![Lighthouse Quiz Desktop](readme/lighthouse-quiz-desktop.PNG)
+  
+</details>
+
+<details>
+  <summary>Mobile</summary>
+
+  ![Lighthouse Homepage Mobile](readme/lighthouse-homepage-mobile.PNG)
+  ![Lighthouse Quiz Mobile](readme/lighthouse-quiz-mobile.PNG)
+  
+</details>
+
+## Accessibility
+
+All pages were tested through [Wave](https://wave.webaim.org/) for accessibility
+
+![Wave Test Result](readme/wave-homepage.PNG)
+![Wave Test Result](readme/wave-quizpage.PNG)
         
 # Bugs/Issues
 
 ## Fixed
+
+- The function to start the game is called when the DOM loads. The startGame function was applying a display: none to the "Next" button and the "Start again!" button. With some connection, when the page was loading slightly slower the two buttons would appear briefly on the screen before disappearing. I was able to easily fix this by applying the display: none directly on CSS file instead.
 
 ## Unfixed
 
@@ -160,14 +207,36 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
   - From the source section drop-down menu, select the Master Branch.
   - Once you've selected your branch and root directory, click "Save" to deploy your website. GitHub will generate a URL where your website will be hosted (usually in the format username.github.io/repository-name).
 
-The live link can be found here - [Live Website](addlink).
+The live link can be found here - [Live Website](https://debear92.github.io/who-said-it/).
+
+## To fork the repository on GitHub
+
+A copy of the GitHub Repository can be made by forking the GitHub account. Changes can be made on this copy without affecting the original repository.
+
+1. Log in to GitHub and locate the repository in question.
+2. Locate the Fork button which can be found in the top corner, right-hand side of the page, inline with the repository name.
+3. Click this button to create a copy of the original repository in your GitHub Account.
+
+## To clone the repository on GitHub
+
+1. Click on the code button which is underneath the main tab and repository name to the right.
+2. In the 'Clone with HTTPS' section, click on the clipboard icon to copy the URL.
+3. Open Git Bash in your IDE of choice.
+4. Change the current working directory to where you want the cloned directory to be made.
+5. Type git clone, and then paste the URL copied from GitHub.
+6. Press enter and the clone of your repository will be created.
 
 # Credits
 
 ## Media
 
-## Content
+- The Taylor Swift and Shakespeare cartoonized icons used in the logo are part of [Canva](https://www.canva.com/) Pro plan. 
+- The icons used on the top bar of the game to restart the game and toggle audio on or off are from [Fontawesome](https://fontawesome.com/)
+- The sounds for correct and wrong answer are from [Zedge](https://www.zedge.net/)
+- The song at the end of the quiz was downloaded from Taylor Swift's official [Youtube Channel](https://www.youtube.com/watch?v=B-MfwP_RmHY)
 
 ## Code
+
+- 
 
 # Aknowledgments

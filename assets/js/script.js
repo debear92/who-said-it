@@ -95,7 +95,6 @@ restart.addEventListener('click', restartGame);
  */
 function startGame() {
     let currentQuizQuestion = quotes[currentQuestion];
-    let author = quotes[currentQuestion].author;
     comment.style.display = "none";
     questionContainer.innerText = currentQuizQuestion.quote;
     correctAudio.currentTime = 0;
