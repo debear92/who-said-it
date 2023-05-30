@@ -95,6 +95,10 @@ footer a:hover {
     font-weight: 600;
 }
 
+i {
+    cursor: pointer;
+}
+
 #restart {
     left: 40%;
     position: relative;
