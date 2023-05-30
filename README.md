@@ -2,7 +2,7 @@
 
 [View the live project here](https://debear92.github.io/who-said-it/)
 
-Who Said It it's quiz game where users are presented with a prompt that could either be a Taylor Swift's lyric or a Shakespeare's quote. The user will have to choose the right answer and get a score of 6 or beyond to win the game.
+Who Said It it's a quiz game where users are presented with a prompt that could either be a Taylor Swift's lyric or a Shakespeare's quote. The user will have to choose the right answer and get a score of 6 or beyond to win the game.
 
 # Table of Contents
 - [User Experience](#user-experience)
