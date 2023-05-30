@@ -158,6 +158,7 @@ function getNextQuestion() {
         stopAudio();
         startGame();
     } else {
+        stopAudio();
         showResult();
     }
 }
