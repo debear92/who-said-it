@@ -157,6 +157,7 @@ function getNextQuestion() {
     if (currentQuestion < quotes.length) {
         stopAudio();
         startGame();
+        nextButton.style.display = "none";
     } else {
         stopAudio();
         showResult();
