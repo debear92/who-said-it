@@ -83,8 +83,8 @@ Two fonts were paired togheter for the website. The two fonts were chosen on [Go
 
 - This page is the core of the application. The user will be asked to answer 10 questions. 
 - For each question the user will be presented with two options: Taylor Swift or Shakespeare. Once the user select an option they won't be able to change it.
-- If a user answer a question correctly a correct answer sound will be played and the selected option will turn green. The score will increment by one.
-- If a user answer a question incorrectly a wrong answer sound will be played and the selected option wil turn red. The score will remain the same.
+- If a user answers a question correctly a correct answer sound will be played and the selected option will turn green. The score will increment by one.
+- If a user answers a question incorrectly a wrong answer sound will be played and the selected option wil turn red. The score will remain the same.
 - Once the question is answered, the user will presented with a short explanation on why the answer was right or wrong by informing the user which song or play the lyric is from.
 - On top of the question, the user will find a bar that will show their current score and will allow the user to restart the game from the beginning and toggle on or off the audio.
 
@@ -100,7 +100,7 @@ Two fonts were paired togheter for the website. The two fonts were chosen on [Go
 
 ## Responsivness
 
-- The website was built to be fully responsive on screens from 300px wide and above.
+- The website was built to be fully responsive on screens from 280px wide and above.
 - The responsivness has been reached with the use of different methods, mainly media queries and the use of flexbox.
 
 ## Features To Implement

@@ -172,7 +172,7 @@ function showResult() {
     if (oldScore >= 6 ) {
         questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! You are a real Swiftie or maybe a Shakesperian poet or a bit of both!`;
     } else {
-    questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! Maybe you should read some more english litterature and listen to the latest Taylor Swift's album!`;
+    questionContainer.innerText = `You scored ${oldScore} out of ${quotes.length}! Maybe you should read some more English literature and listen to the latest Taylor Swift's album!`;
     }
     playScorePage();
     nextButton.style.display = 'none';
